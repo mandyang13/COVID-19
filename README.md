@@ -43,4 +43,4 @@ npm run lint -- --fix
 ```
 
 This project use Vue-admin-template https://github.com/PanJiaChen/vue-admin-template
-and charting library https://github.com/apexcharts/vue-apexcharts 
+and charting library https://github.com/apexcharts/vue-apexcharts see DOCS https://apexcharts.com/docs 
