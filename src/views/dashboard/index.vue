@@ -169,9 +169,6 @@ export default {
           type: 'line',
           stacked: false
         },
-        dataLabels: {
-          enabled: false
-        },
         plotOptions: {
           bar: {
             // horizontal: false,
@@ -222,12 +219,15 @@ export default {
         // fill: {
         //   opacity: 1
         // },
-        tooltip: {
-          shared: false,
-          intersect: true,
-          x: {
-            show: false
+        dataLabels: {
+          enabled: true,
+          enabledOnSeries: [0],
+          style: {
+            fontSize: '0px'
           }
+        },
+        markers: {
+          size: 8
         },
         legend: {
           horizontalAlign: 'left',
@@ -315,7 +315,7 @@ export default {
       for (var item of this.cov) {
         for (var i in item) {
           if (i === 'Reported Date') {
-            if (this.moment(item[i], "DD/MM/YYYY").toDate()>d) {
+            if (this.moment(item[i], 'DD/MM/YYYY').toDate() > d) {
               flag = true
             }
           }
@@ -370,7 +370,7 @@ export default {
       for (var item of this.cov) {
         for (var i in item) {
           if (i === 'Reported Date') {
-            if (this.moment(item[i], "DD/MM/YYYY").toDate()>d) {
+            if (this.moment(item[i], 'DD/MM/YYYY').toDate() > d) {
               flag = true
               dateList.push(item[i])
             }
@@ -398,8 +398,8 @@ export default {
       }
     },
     moment(date) {
-      return moment(date);
-    },
+      return moment(date)
+    }
   }
 }
 </script>
