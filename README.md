@@ -45,4 +45,4 @@ npm run lint -- --fix
 This project use Vue-admin-template https://github.com/PanJiaChen/vue-admin-template
 and charting library https://github.com/apexcharts/vue-apexcharts see DOCS https://apexcharts.com/docs see Demos https://apexcharts.com/vue-chart-demos/ 
 
-The dataset came from https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario and is converted to json file stored in ./src/views/dashboard/cov.json
+The dataset came from https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario and is converted to json file via online converter (https://www.aconvert.com/cn/document/csv-to-json/) and stored in ./src/views/dashboard/cov.json
