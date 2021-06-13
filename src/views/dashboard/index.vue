@@ -141,7 +141,27 @@ export default {
                 background: '#a52a2a'
               },
 
-              text: 'Vaccine'
+              text: 'Vaccine Rollout'
+            }
+          }, {
+            x: new Date('22 May 2021').getTime(),
+            y: 21454,
+            marker: {
+              size: 8,
+              fillColor: '#fff',
+              strokeColor: '#a52a2a',
+              radius: 2,
+              cssClass: 'apexcharts-custom-class'
+            },
+            label: {
+              borderColor: '#a52a2a',
+              offsetY: 0,
+              style: {
+                color: '#fff',
+                background: '#a52a2a'
+              },
+
+              text: '50% Vaccinated (first-dose)'
             }
           }]
         }
@@ -181,7 +201,7 @@ export default {
           width: 2
         },
         xaxis: {
-          categories: ['2020-Q2', '2020-Q3', '2020-Q4', '2021-Q1']
+          categories: ['2020-Q2', '2020-Q3', '2020-Q4', '2021-Q1', '2021-Q2']
         },
         yaxis: [
           {
@@ -333,7 +353,7 @@ export default {
         //   break
         // }
       }
-      var q = cat1.length / 4
+      var q = cat1.length / 5
       var cat1q = this.avgEvery(cat1, q)
       var cat2q = this.avgEvery(cat2, q)
       var cat3q = this.avgEvery(cat3, q)
@@ -374,11 +394,11 @@ export default {
               flag = true
               dateList.push(item[i])
             }
-          } else if (flag && i === 'Total_Lineage_B-1-1-7') {
+          } else if (flag && i === 'Total_Lineage_B_1_1_7') {
             mut1.push(item[i] === '' ? 0 : parseInt(item[i]))
-          } else if (flag && i === 'Total_Lineage_B-1-351') {
+          } else if (flag && i === 'Total_Lineage_B_1_351') {
             mut2.push(item[i] === '' ? 0 : parseInt(item[i]))
-          } else if (flag && i === 'Total_Lineage_P-1') {
+          } else if (flag && i === 'Total_Lineage_P_1') {
             mut3.push(item[i] === '' ? 0 : parseInt(item[i]))
           }
         }
@@ -407,7 +427,7 @@ export default {
 <style lang="scss" scoped>
 .dashboard {
   &-container {
-    margin: 30px;
+    margin: 30px 40px 30px 30px;
   }
   &-text {
     font-size: 30px;
